@@ -110,7 +110,7 @@ def save_signature(sigfile, sig):
         f.write(signature)
 
 
-def load_key(keyfile, allow_aes=False):
+def load_key(keyfile, allow_aes=True):
     # TODO: better handling of invalid pass-phrase
     key = keys.load(keyfile, allow_aes=allow_aes)
     if key is not None:
